@@ -79,11 +79,10 @@ By using filtering in SQL, you can tailor your queries to retrieve only the data
 
 ## Creating a New Table from an Existing Table
 
-## -- Create the employees ta
 
-##
 
-<pre class="language-sql"><code class="lang-sql"><strong>CREATE TABLE employees (
+<pre class="language-sql"><code class="lang-sql">-- Create the employees table
+<strong>CREATE TABLE employees (
 </strong>    employee_id INT PRIMARY KEY,
     name VARCHAR(50),
     department VARCHAR(50),
