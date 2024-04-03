@@ -109,7 +109,8 @@ CREATE TABLE employee_backup LIKE employees;
 -- Populate the employee_backup table with data from the employees table
 INSERT INTO employee_backup (employee_id, name, department, salary)
 SELECT employee_id, name, department, salary
-FROM employees;
+FROM employees
+where salary>=60000;
 
 -- Display the data in the employee_backup table to verify
 SELECT * FROM employee_backup;
