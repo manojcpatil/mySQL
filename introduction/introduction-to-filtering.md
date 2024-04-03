@@ -115,3 +115,12 @@ FROM employees;
 SELECT * FROM employee_backup;
 
 </code></pre>
+
+| employee\_id | name           | department  | salary |
+| ------------ | -------------- | ----------- | ------ |
+| 1            | Rahul Sharma   | Engineering | 60000  |
+| 3            | Amit Kumar     | Sales       | 62000  |
+| 5            | Rajesh Gupta   | HR          | 63000  |
+| 7            | Vivek Reddy    | Sales       | 60000  |
+| 8            | Deepika Mishra | Engineering | 61000  |
+| 10           | Kavita Singh   | Sales       | 62000  |
