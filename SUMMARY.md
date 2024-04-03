@@ -4,9 +4,8 @@
 
 ## INTRODUCTION
 
-* [Querying Single Table](introduction/querying-single-table/README.md)
-  * [SQL Syntax](introduction/querying-single-table/sql-syntax/README.md)
-    * [Page 2](introduction/querying-single-table/sql-syntax/page-2.md)
+* [SQL Syntax](introduction/sql-syntax.md)
+* [Querying Single Table](introduction/querying-single-table.md)
 * [Introduction to Filtering](introduction/introduction-to-filtering.md)
 * [Understanding SQL Joins: Connecting Data Across Tables](introduction/understanding-sql-joins-connecting-data-across-tables.md)
 * [Aggregation and Grouping](introduction/aggregation-and-grouping.md)
