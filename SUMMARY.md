@@ -4,7 +4,9 @@
 
 ## INTRODUCTION
 
+* [SQL commands](introduction/sql-commands.md)
 * [SQL Syntax](introduction/sql-syntax.md)
+* [Dealing with Databases](introduction/dealing-with-databases.md)
 * [Querying Single Table](introduction/querying-single-table.md)
 * [Introduction to Filtering](introduction/introduction-to-filtering.md)
 * [Understanding SQL Joins: Connecting Data Across Tables](introduction/understanding-sql-joins-connecting-data-across-tables.md)

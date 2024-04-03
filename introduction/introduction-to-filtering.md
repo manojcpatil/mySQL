@@ -76,3 +76,43 @@ By using filtering in SQL, you can tailor your queries to retrieve only the data
        ```
 
        Explanation: This query selects the `name` column from the `city` table where the `country_id` is in the list `(1, 4, 7, 8)`. It retrieves the names of cities that belong to countries with IDs 1, 4, 7, or 8.
+
+## Creating a New Table from an Existing Table
+
+## -- Create the employees ta
+
+##
+
+<pre class="language-sql"><code class="lang-sql"><strong>CREATE TABLE employees (
+</strong>    employee_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50),
+    salary DECIMAL(10, 2)
+);
+
+-- Insert Indian sample data into the employees table
+INSERT INTO employees (employee_id, name, department, salary)
+VALUES
+    (1, 'Rahul Sharma', 'Engineering', 60000.00),
+    (2, 'Priya Patel', 'Marketing', 55000.00),
+    (3, 'Amit Kumar', 'Sales', 62000.00),
+    (4, 'Sneha Singh', 'Engineering', 58000.00),
+    (5, 'Rajesh Gupta', 'HR', 63000.00),
+    (6, 'Anjali Verma', 'Marketing', 59000.00),
+    (7, 'Vivek Reddy', 'Sales', 60000.00),
+    (8, 'Deepika Mishra', 'Engineering', 61000.00),
+    (9, 'Sandeep Desai', 'HR', 54000.00),
+    (10, 'Kavita Singh', 'Sales', 62000.00);
+
+-- Create the employee_backup table with the same structure as employees
+CREATE TABLE employee_backup LIKE employees;
+
+-- Populate the employee_backup table with data from the employees table
+INSERT INTO employee_backup (employee_id, name, department, salary)
+SELECT employee_id, name, department, salary
+FROM employees;
+
+-- Display the data in the employee_backup table to verify
+SELECT * FROM employee_backup;
+
+</code></pre>
