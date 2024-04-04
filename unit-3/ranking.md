@@ -44,6 +44,8 @@ FROM EmployeeSalary;
 
 This query uses the `ROW_NUMBER()` window function to assign a unique sequential number to each row in the result set, ordered by `Salary` in descending order. The assigned sequential number is aliased as `SalaryRowNumber`.
 
+<table><thead><tr><th width="137">EmployeeID</th><th width="155">EmployeeName</th><th width="109">JobTitle</th><th width="90">Salary</th><th>SalaryRowNumber</th></tr></thead><tbody><tr><td>4</td><td>Sneha Patel</td><td>Developer</td><td>98000</td><td>1</td></tr><tr><td>5</td><td>Neha Singh</td><td>Developer</td><td>95000</td><td>2</td></tr><tr><td>8</td><td>Kunal Singh</td><td>Analyst</td><td>88000</td><td>3</td></tr><tr><td>7</td><td>Rajesh Verma</td><td>Analyst</td><td>80000</td><td>4</td></tr><tr><td>9</td><td>Divya Jain</td><td>Intern</td><td>80000</td><td>5</td></tr><tr><td>2</td><td>Priya Sharma</td><td>Manager</td><td>65000</td><td>6</td></tr><tr><td>6</td><td>Ananya Mehta</td><td>Developer</td><td>62000</td><td>7</td></tr><tr><td>3</td><td>Rahul Gupta</td><td>Manager</td><td>55000</td><td>8</td></tr><tr><td>1</td><td>Amit Kumar</td><td>Manager</td><td>50000</td><td>9</td></tr></tbody></table>
+
 ### Rank()
 
 ```sql
@@ -56,6 +58,18 @@ FROM EmployeeSalary;
 
 This query utilizes the `RANK()` window function to assign a rank to each row in the result set based on `Salary`, within each partition defined by `JobTitle`. The rank is calculated in descending order of salary within each job title group and is aliased as `SalaryRankByJob`.
 
+| EmployeeID | EmployeeName | JobTitle  | Salary | SalaryRankByJob |
+| ---------- | ------------ | --------- | ------ | --------------- |
+| 8          | Kunal Singh  | Analyst   | 88000  | 1               |
+| 7          | Rajesh Verma | Analyst   | 80000  | 2               |
+| 4          | Sneha Patel  | Developer | 98000  | 1               |
+| 5          | Neha Singh   | Developer | 95000  | 2               |
+| 6          | Ananya Mehta | Developer | 62000  | 3               |
+| 9          | Divya Jain   | Intern    | 80000  | 1               |
+| 2          | Priya Sharma | Manager   | 65000  | 1               |
+| 3          | Rahul Gupta  | Manager   | 55000  | 2               |
+| 1          | Amit Kumar   | Manager   | 50000  | 3               |
+
 ```sql
 -- RANK(): Get same ranks for rows having similar values
 SELECT *,
@@ -65,6 +79,18 @@ FROM EmployeeSalary;
 
 This query uses the `RANK()` window function without `PARTITION BY`, resulting in the same rank being assigned to rows with identical `Salary` values. The rank is determined based on the `Salary` column in descending order, and it is aliased as `SalaryRank`.
 
+| EmployeeID | EmployeeName | JobTitle  | Salary | SalaryRank |
+| ---------- | ------------ | --------- | ------ | ---------- |
+| 4          | Sneha Patel  | Developer | 98000  | 1          |
+| 5          | Neha Singh   | Developer | 95000  | 2          |
+| 8          | Kunal Singh  | Analyst   | 88000  | 3          |
+| 7          | Rajesh Verma | Analyst   | 80000  | 4          |
+| 9          | Divya Jain   | Intern    | 80000  | 4          |
+| 2          | Priya Sharma | Manager   | 65000  | 6          |
+| 6          | Ananya Mehta | Developer | 62000  | 7          |
+| 3          | Rahul Gupta  | Manager   | 55000  | 8          |
+| 1          | Amit Kumar   | Manager   | 50000  | 9          |
+
 ```sql
 -- DENSE_RANK(): Assign ranks to rows, ensuring no gaps in ranking
 SELECT *,
@@ -73,6 +99,18 @@ FROM EmployeeSalary;
 ```
 
 This query employs the `DENSE_RANK()` window function to assign ranks to rows based on `Salary` in descending order, ensuring there are no gaps in the ranking sequence. The rank is aliased as `DenseSalaryRank`.
+
+| EmployeeID | EmployeeName | JobTitle  | Salary | DenseSalaryRank |
+| ---------- | ------------ | --------- | ------ | --------------- |
+| 4          | Sneha Patel  | Developer | 98000  | 1               |
+| 5          | Neha Singh   | Developer | 95000  | 2               |
+| 8          | Kunal Singh  | Analyst   | 88000  | 3               |
+| 7          | Rajesh Verma | Analyst   | 80000  | 4               |
+| 9          | Divya Jain   | Intern    | 80000  | 4               |
+| 2          | Priya Sharma | Manager   | 65000  | 5               |
+| 6          | Ananya Mehta | Developer | 62000  | 6               |
+| 3          | Rahul Gupta  | Manager   | 55000  | 7               |
+| 1          | Amit Kumar   | Manager   | 50000  | 8               |
 
 ### NTILE()
 
@@ -97,24 +135,21 @@ SELECT *,
 FROM EmployeeSalary;
 ```
 
+| EmployeeID | EmployeeName | JobTitle  | Salary | SalaryRank |
+| ---------- | ------------ | --------- | ------ | ---------- |
+| 4          | Sneha Patel  | Developer | 98000  | 1          |
+| 5          | Neha Singh   | Developer | 95000  | 1          |
+| 8          | Kunal Singh  | Analyst   | 88000  | 1          |
+| 7          | Rajesh Verma | Analyst   | 80000  | 2          |
+| 9          | Divya Jain   | Intern    | 80000  | 2          |
+| 2          | Priya Sharma | Manager   | 65000  | 2          |
+| 6          | Ananya Mehta | Developer | 62000  | 3          |
+| 3          | Rahul Gupta  | Manager   | 55000  | 3          |
+| 1          | Amit Kumar   | Manager   | 50000  | 3          |
+
 Description:
 
 * This part of the code demonstrates the usage of NTILE() function with PARTITION BY clause.
 * NTILE() function divides the employees within each job title into a specified number of groups (in this case, 3) based on their salary.
 * The result set is partitioned by the `JobTitle` column, and within each partition, the employees are ranked based on their salary in descending order.
 * The assigned rank for each group is provided in the `SalaryRank` column.
-
-```sql
--- Partitioning with PARTITION BY clause
--- Apply RANK() function within each partition defined by JobTitle
-SELECT *,
-       RANK() OVER(PARTITION BY JobTitle ORDER BY Salary DESC) AS SalaryRankWithinJobTitle
-FROM EmployeeSalary;
-```
-
-In this code:
-
-* A table named `EmployeeSalary` is created with columns for `EmployeeID`, `EmployeeName`, `JobTitle`, and `Salary`.
-* Sample data representing employees with different job titles and salaries is inserted into the `EmployeeSalary` table.
-* The `RANK()` window function is applied with the `PARTITION BY` clause. This partitions the result set into separate groups based on the `JobTitle` column, and within each partition, the employees are ranked based on their salary in descending order.
-* The result set includes the original columns from the `EmployeeSalary` table along with the calculated `SalaryRankWithinJobTitle` column, indicating the rank of each employee's salary within their respective job title group.

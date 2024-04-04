@@ -2,24 +2,24 @@
 
 * [🖌️ Introduction to mySQL](README.md)
 
-## INTRODUCTION
+## Unit-1
 
-* [SQL commands](introduction/sql-commands.md)
-* [SQL Syntax](introduction/sql-syntax.md)
-* [Dealing with Databases](introduction/dealing-with-databases.md)
-* [Querying Single Table](introduction/querying-single-table.md)
-* [Introduction to Filtering](introduction/introduction-to-filtering.md)
-* [Understanding SQL Joins: Connecting Data Across Tables](introduction/understanding-sql-joins-connecting-data-across-tables.md)
-* [Aggregation and Grouping](introduction/aggregation-and-grouping.md)
+* [SQL commands](unit-1/sql-commands.md)
+* [SQL Syntax](unit-1/sql-syntax.md)
+* [Dealing with Databases](unit-1/dealing-with-databases.md)
+* [Querying Single Table](unit-1/querying-single-table.md)
+* [Introduction to Filtering](unit-1/introduction-to-filtering.md)
+* [Understanding SQL Joins: Connecting Data Across Tables](unit-1/understanding-sql-joins-connecting-data-across-tables.md)
+* [Aggregation and Grouping](unit-1/aggregation-and-grouping.md)
 
-## identity
+## unit-2
 
-* [SUBQUERIES](identity/subqueries.md)
-* [Set Operations](identity/set-operations.md)
-* [View](identity/view.md)
-* [Operators and Functions](identity/operators-and-functions.md)
+* [SUBQUERIES](unit-2/subqueries.md)
+* [Set Operations](unit-2/set-operations.md)
+* [View](unit-2/view.md)
+* [Operators and Functions](unit-2/operators-and-functions.md)
 
-## Components
+## Unit-3
 
-* [Clauses](components/clauses.md)
-* [Ranking](components/ranking.md)
+* [Clauses](unit-3/clauses.md)
+* [Ranking](unit-3/ranking.md)
