@@ -8,25 +8,11 @@
 {% tab title="Introduction" %}
 **City Table:**
 
-| id | name      | country\_id |
-| -- | --------- | ----------- |
-| 1  | Paris     | 101         |
-| 2  | Marseille | 102         |
-| 3  | Lyon      | 102         |
-| 4  | Berlin    | 102         |
-| 5  | Hamburg   | 103         |
-| 6  | Munich    | 104         |
-| 7  | Warsaw    | 104         |
-| 8  | Cracow    | 104         |
+<table><thead><tr><th width="100">id</th><th width="107">name</th><th>country_id</th></tr></thead><tbody><tr><td>1</td><td>Paris</td><td>101</td></tr><tr><td>2</td><td>Marseille</td><td>102</td></tr><tr><td>3</td><td>Lyon</td><td>102</td></tr><tr><td>4</td><td>Berlin</td><td>102</td></tr><tr><td>5</td><td>Hamburg</td><td>103</td></tr><tr><td>6</td><td>Munich</td><td>104</td></tr><tr><td>7</td><td>Warsaw</td><td>104</td></tr><tr><td>8</td><td>Cracow</td><td>104</td></tr></tbody></table>
 
 **City Aggregate Table:**
 
-| country\_id | count |
-| ----------- | ----- |
-| 101         | 1     |
-| 102         | 3     |
-| 103         | 1     |
-| 104         | 3     |
+<table><thead><tr><th width="127">country_id</th><th>count</th></tr></thead><tbody><tr><td>101</td><td>1</td></tr><tr><td>102</td><td>3</td></tr><tr><td>103</td><td>1</td></tr><tr><td>104</td><td>3</td></tr></tbody></table>
 
 **Aggregate Functions:**
 

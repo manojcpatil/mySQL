@@ -6,7 +6,7 @@
 
 ## Before Studying set operations lets generate some tables
 
-```
+```sql
 -- Create the database
 CREATE DATABASE company_database;
 

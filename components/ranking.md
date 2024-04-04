@@ -1,30 +1,35 @@
 # Ranking
 
-```sql
--- Create a sample table EmployeeSalary
-CREATE TABLE EmployeeSalary (
-    EmployeeID INT,
+<pre class="language-sql"><code class="lang-sql">-- Create a sample table EmployeeSalary
+<strong>CREATE TABLE EmployeeSalary (
+</strong>    EmployeeID INT primary key,
     EmployeeName VARCHAR(50),
     JobTitle VARCHAR(50),
     Salary DECIMAL(10, 2)
 );
-```
+</code></pre>
 
 This SQL statement creates a table named `EmployeeSalary` with columns for `EmployeeID`, `EmployeeName`, `JobTitle`, and `Salary`. `EmployeeID` is an integer identifier for each employee, `EmployeeName` stores the names of the employees (using Indian names in this case), `JobTitle` represents the job title of each employee, and `Salary` stores the salary information for each employee.
 
 ```sql
 -- Insert sample data into the EmployeeSalary table
 INSERT INTO EmployeeSalary (EmployeeID, EmployeeName, JobTitle, Salary) VALUES
-(1, 'Amit Kumar', 'Manager', 60000),
-(2, 'Priya Sharma', 'Manager', 55000),
-(3, 'Rahul Gupta', 'Manager', 50000),
-(4, 'Sneha Patel', 'Developer', 48000),
-(5, 'Neha Singh', 'Developer', 45000),
-(6, 'Ananya Mehta', 'Developer', 42000),
-(7, 'Rajesh Verma', 'Analyst', 40000),
-(8, 'Kunal Singh', 'Analyst', 38000),
-(9, 'Divya Jain', 'Intern', 30000);
+(1, 'Amit Kumar', 'Manager', 50000),
+(2, 'Priya Sharma', 'Manager', 65000),
+(3, 'Rahul Gupta', 'Manager', 55000),
+(4, 'Sneha Patel', 'Developer', 98000),
+(5, 'Neha Singh', 'Developer', 95000),
+(6, 'Ananya Mehta', 'Developer', 62000),
+(7, 'Rajesh Verma', 'Analyst', 80000),
+(8, 'Kunal Singh', 'Analyst', 88000),
+(9, 'Divya Jain', 'Intern', 80000);
 ```
+
+Here's the `EmployeeSalary` table:
+
+<table><thead><tr><th width="142">EmployeeID</th><th width="155">EmployeeName</th><th width="113">JobTitle</th><th>Salary</th></tr></thead><tbody><tr><td>1</td><td>Amit Kumar</td><td>Manager</td><td>50000</td></tr><tr><td>2</td><td>Priya Sharma</td><td>Manager</td><td>65000</td></tr><tr><td>3</td><td>Rahul Gupta</td><td>Manager</td><td>55000</td></tr><tr><td>4</td><td>Sneha Patel</td><td>Developer</td><td>98000</td></tr><tr><td>5</td><td>Neha Singh</td><td>Developer</td><td>95000</td></tr><tr><td>6</td><td>Ananya Mehta</td><td>Developer</td><td>62000</td></tr><tr><td>7</td><td>Rajesh Verma</td><td>Analyst</td><td>80000</td></tr><tr><td>8</td><td>Kunal Singh</td><td>Analyst</td><td>88000</td></tr><tr><td>9</td><td>Divya Jain</td><td>Intern</td><td>80000</td></tr></tbody></table>
+
+This table represents the `EmployeeID, EmployeeName, JobTitle`, and `Salary` for each employee provided in the data.
 
 ### Row\_Number()
 

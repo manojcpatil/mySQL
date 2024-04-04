@@ -132,16 +132,4 @@ SELECT AVG(Salary) FROM EmployeeSalary;
 
 ### Operators
 
-| Operator | Description                                                                                                       |
-| -------- | ----------------------------------------------------------------------------------------------------------------- |
-| ALL      | Used to compare a value to all values in another value set.                                                       |
-| AND      | Allows the existence of multiple conditions in a WHERE clause.                                                    |
-| ANY      | Compares a value to any applicable value in the list according to the condition.                                  |
-| BETWEEN  | Searches for values within a set of values, given the minimum value and the maximum value.                        |
-| EXISTS   | Searches for the presence of a row in a specified table that meets certain criteria.                              |
-| IN       | Compares a value to a list of literal values that have been specified.                                            |
-| LIKE     | Compares a value to similar values using wildcard operators.                                                      |
-| NOT      | Reverses the meaning of the logical operator with which it is used (e.g., NOT EXISTS, NOT BETWEEN, NOT IN, etc.). |
-| OR       | Combines multiple conditions in a WHERE clause.                                                                   |
-| IS NULL  | Compares a value with a NULL value.                                                                               |
-| UNIQUE   | Searches every row of a specified table for uniqueness (no duplicates).                                           |
+<table><thead><tr><th width="132">Operator</th><th>Description</th></tr></thead><tbody><tr><td>ALL</td><td>Used to compare a value to all values in another value set.</td></tr><tr><td>AND</td><td>Allows the existence of multiple conditions in a WHERE clause.</td></tr><tr><td>ANY</td><td>Compares a value to any applicable value in the list according to the condition.</td></tr><tr><td>BETWEEN</td><td>Searches for values within a set of values, given the minimum value and the maximum value.</td></tr><tr><td>EXISTS</td><td>Searches for the presence of a row in a specified table that meets certain criteria.</td></tr><tr><td>IN</td><td>Compares a value to a list of literal values that have been specified.</td></tr><tr><td>LIKE</td><td>Compares a value to similar values using wildcard operators.</td></tr><tr><td>NOT</td><td>Reverses the meaning of the logical operator with which it is used (e.g., NOT EXISTS, NOT BETWEEN, NOT IN, etc.).</td></tr><tr><td>OR</td><td>Combines multiple conditions in a WHERE clause.</td></tr><tr><td>IS NULL</td><td>Compares a value with a NULL value.</td></tr><tr><td>UNIQUE</td><td>Searches every row of a specified table for uniqueness (no duplicates).</td></tr></tbody></table>

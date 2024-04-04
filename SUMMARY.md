@@ -23,4 +23,3 @@
 
 * [Clauses](components/clauses.md)
 * [Ranking](components/ranking.md)
-* [Inputs](components/inputs.md)
